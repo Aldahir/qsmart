@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>Q-smart</title>
+		<meta name="robots" content="noindex">
+		<link rel="manifest" href="manifest.webmanifest">
+		<link rel="stylesheet" href="q_smart_app_style.css">
+		<link rel="icon" href="assets/images/ic.png" type="image/png">
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<main role="main">
+			<div class="__smart__logo">
+				<div class="__smart__logo__image"><a href="javascript:void(0)" class="__smart__anchor"></a></div>
+			</div>
+			<div class="__smart__text">
+				<div class="__smart__text__caption">
+					<h2 class="__smart_caption">Seja bem-vindo<br>
+						e sinta-se a vontade</h2>
+				</div>
+			</div>
+			<div class="__smart__control">
+				<div class="__smart__control__button">
+					<button id="__smart__enter" role="button" class="__smart__button __button__default">Vamos começar</button>
+				</div>
+				
+				<div class="__smart__text">
+					Não tem conta de utilizador?
+					<a href="signup.html" class="__smart__anchor">Cria já</a>
+				</div>
+			</div>
+		</main>
+		<script>
+			window.onload = function(){
+				let btn = document.querySelector("#__smart__enter");
+				
+				btn.addEventListener('click', function(err, next){
+					if(!err){
+						throw err
+					} else {
+					
+						location.href="login.html";
+						console.log('carregou no botão para seguinte');
+					}
+					
+				})
+			}
+		</script>
+	</body>
+</html>

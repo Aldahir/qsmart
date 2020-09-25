@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#395AFF">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+
+    <title>Q-smart</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="q_smart_app_style.css">
+    <link rel="apple-touch-icon" href="assets/images/ic_192.png">
+    <link rel="icon" href="assets/images/ic.png" type="image/png">
+</head>
+<body>
+    <div style="display: none;">
+        <label for="data">Qual a sua data de nascimento?</label>
+        <input type="text" name="dia" id="dia">
+        <input type="text" name="mes" id="mes">
+        <input type="text" name="ano" id="ano">
+        
+
+        <div class="dia"></div>
+        <div class="mes"></div>
+        <div class="ano"></div>
+    </div>
+    
+    <style>
+        .smart_label {
+            display: grid;
+            grid-template-columns: repeat(2,50%);
+            padding: 10px 5% 0;
+            height: 48px;
+            background: linear-gradient(180deg, white, 93%, transparent);
+        }
+        .smart_label .__smart__control {
+            margin: 0;
+            align-items: center;
+            align-self: baseline;
+        }
+        .smart_label .__smart__control {
+            margin: 0;
+            align-items: center;
+            align-self: baseline;
+        }
+        .smart_label .__smart__control .__smart_caption {
+            margin: 0;
+            font-size: 1.8em;
+            align-items: center;
+            align-self: center;
+            text-align: start;
+            letter-spacing: -1px;
+        }
+        .__smart__search{
+            top: 0;
+            background-color: white;
+            width: 100%;
+            grid-template-columns: 100%;
+            grid-template-rows: 40% 7% 50%;
+            gap: 1%;
+            z-index: 995;
+            /*overflow: hidden;*/
+        }
+        ul#inquery {
+    overflow-y:auto
+}
+
+ul#inquery .item {
+        display: grid;
+    grid-template-columns: 30% 68%;
+    column-gap: 2%;
+    padding: 0;
+}
+
+ul#inquery .item .description p {
+    margin: 5px 0;
+    font-size: .8em;
+}
+
+ul#inquery .item .description a h3 {
+        font-weight: 900;
+    margin: 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.__smart__inqueries__list #inquery > li.item > .description > p:first-of-type {
+    font-weight: bold;
+    display: block;
+}
+
+.__smart__inqueries {
+    margin: auto;
+    overflow-y: auto;
+}
+    </style>
+    
+    <header style="position: fixed;top: 0;width: 100%;z-index: 999;background-color: white;">
+        <div class="__smart__back">
+            <div class="__anchor">
+                <a style="color: black;" href="javascript:history.back()">&larr;</a>
+            </div>
+        </div>
+        <div class="__smart__logo">
+            <div class="__smart__logo__image"><a href="javascript:void(0)" class="__smart__anchor"></a></div>
+        </div>
+    </header>
+
+    <main role="main" style="grid-template-rows: 100%;height: calc(100vh - 65px);margin-top: 55px;">
+        <style>
+            ul#inquery img {
+                width: 260px;
+    margin-right: 11%;
+    display: block;
+            }
+ul#inquery li.item .description {
+    padding: 6px 8px 8px 0;
+}
+            .__smart__form__search form .__smart_input_text {
+                height: 45px;
+            }
+
+            .__smart__form__search form ._icon img#search_ic {
+                display: block;
+            }
+
+            .__smart__form__search form ._icon {
+                position: absolute;
+                top: 13px;
+                right: 15px;
+            }
+
+            .__smart__form__search form {
+                position: relative;
+                margin-bottom: 20px;
+            }
+
+            .__smart__form__search form ._icon img {
+                width: 20px;
+            }
+
+            .__smart__form__search form ._icon img#close_ic {
+                display: none;
+            }
+        </style>
+
+        <div class="__smart__search">
+            <div class="smart_label" style="margin-bottom: 15px">
+                <div class="__smart__control">
+                    <h3 class="__smart_caption">Pesquisas</h3>
+                </div>
+                <div class="__smart__control">
+                    <span class="__smart__icon"><img src="assets/images/filter.svg"></span><span style="margin-bottom:10px;" class="_text">Filtro</span>
+                </div>
+            </div>
+
+            <div class="__smart__form__search">
+                <form method="GET" class="search_" action="data/controller/qsmart_controller.php">
+                    <div class="__smart__control">
+                        <label for="__smart__search">
+                            <input type="text" name="q" id="query" class="__smart_input_text">
+                        </label>
+                        
+                        <div class="_icon">
+                            <img src="assets/images/search.svg" id="search_ic">
+                            <img src="assets/images/close.svg" id="close_ic">
+                        </div>
+                    </div>
+                    <input type="hidden" name="role" value="search">
+                </form>
+            </div>
+
+            <div class="__smart__inqueries">
+                <div class="__smart__inqueries__list">
+                    <ul id="inquery"></ul>
+                </div>
+            </div>
+        </div>
+    </main><script src="q_smart_script.js"></script>
+    <script>/*let url = 'http://127.0.0.1/qsmart/calendar/database.json' || null, options = {method: 'POST',headers: {'Content-Type': 'application/json; charset=utf-8'},body: JSON.stringify(url)},data = fetch(url, options).then((resp) => resp.json()).then(function(d){let e = d.results;console.log(e);}).catch(function(err){console.log(err);});//let res = data;*/
+
+        function mostrar(e){
+            return document.querySelector(e).style.display = "block";
+        }
+
+        /*
+         * 
+         * Data from database
+         * 
+         */
+
+        let i = [];//[{"id": 1,"title": "Banco mundial","descricao": "Saúde Sexual Reprodutiva","respostas": "1200","respondidas": "900"},{"id": 2,"title": "Brexit","descricao": "Saúde Sexual Reprodutiva","respostas": "129","respondidas": "90"},{"id": 3,"title": "Banco Atlantico Angola","descricao": "Qualidade de atendimento dos clientes","respostas": "12","respondidas": "9"},{"id": 4,"title": "Minsa","descricao": "Rastreamento e Segurança da Covid 19 ","respostas": "1200","respondidas": "8"},{"id": 5,"title": "Afrigroup","descricao": "O consumo de comidas enlatadas","respostas": "500","respondidas": "215"},{"id": 6,"title": "Prodesi","descricao": "Impacto da redução de importação","respostas": "700","respondidas": "700"}];
+
+        var x = document.querySelector('#inquery'), query = document.getElementById('query');
+
+        query.addEventListener('keyup', function(e){
+            if ( this.value.length == 0 ) {
+                closeAlert('#close_ic');
+                mostrar('#search_ic');
+            } else {
+                closeAlert('#search_ic');
+                mostrar('#close_ic');
+            }
+        })
+        
+        document.querySelector('#close_ic').addEventListener('click', function(){
+            document.querySelector('.search_').reset();
+            closeAlert('#close_ic');
+            mostrar('#search_ic'); query.focus();
+        })
+
+        if (i.length>0){
+            let a=1;
+            i.forEach(function(i){
+                x.innerHTML += `<li class="item"><div class="image"><a href=""><img src="assets/images/img.png" alt=""></a></div><div class="description"><a href=""><h3>${i.title}</h3></a><p id="data${a}">${i.descricao}</p><p>${i.respondidas} / ${i.respostas} Respostas</p></div></li>`;
+                limitCharacter('#data'+a, 30);a++;
+            });
+            
+        } else {
+            //document.querySelector('main').style.cssText = "grid-template-rows: 100%;";
+            x.innerHTML += '<img src="assets/images/nothing.svg" style="margin:10% auto;" alt="Nothing found"><h2 style="font-size:2em;font-weight:900;letter-spacing:-2px;text-align:center;color:black;">Nenhum inquerito encontrado</h2>';
+        }
+
+
+        /**
+         * Funcao para limitar caracteres num paragrafo, conteudo, or wathever you need!
+        */
+        function limitCharacter(el, lim) {
+            let res = document.querySelector(el);
+            res.innerHTML = res.innerHTML.substr(0, lim).replace(/\w*$/,'')+"...";
+        }
+    </script>
+</body>
+</html>

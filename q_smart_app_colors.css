@@ -1,0 +1,17 @@
+/**
+*   @author: Aldair Cajicua
+*   @default_uri:
+*   @version: 1.0.1
+*   @description: Ficheiro de controle de cores do app;
+*/
+
+:root {
+    --main: #38b6ff;
+    --default: #395AFF;
+    --danger: #fb4f3b;
+    --success: #3f9741;
+    --information: #FBB03B;
+    --white:white;
+    --black:black;
+    --grey:grey;
+}

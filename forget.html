@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>Q-smart</title>
+		<meta name="robots" content="noindex">
+		<link rel="manifest" href="manifest.webmanifest">
+		<link rel="stylesheet" href="q_smart_app_style.css">
+		<link rel="icon" href="assets/images/ic.png" type="image/png">
+	</head>
+	
+	<style>
+		header {
+			grid-template-columns: 10% 80%;
+			display: grid;
+			column-gap: 2em;
+		}
+		.__smart__back { display: inline-flex; }
+		.__smart__back .__anchor a { font-size: 2.5em; }
+		.__smart__logo__image .__smart__anchor { margin: 0 0 0 auto;}
+		
+	</style>
+	
+	<body>
+		<main style="grid-template-rows: 10% 70% 17%;" role="main">
+			<header>
+				<div class="__smart__back">
+					<div class="__anchor">
+						<a href="javascript:history.back()">&larr;</a>
+					</div>
+				</div>
+				<div class="__smart__logo">
+					<div class="__smart__logo__image"><a href="javascript:void(0)" class="__smart__anchor"></a></div>
+				</div>
+			</header>
+			<form method="post" action="" style="align-self: baseline;">
+				<div class="__smart__text">
+					<div class="__smart__text__caption">
+						<h2 style="text-align: center;" class="__smart_caption">Recuperar senha</h2>
+					</div>
+				</div>
+				<div class="__smart__control">
+					<label for="__smart__mail">
+						<input type="email" placeholder="Escreva seu email" name="__smart__mail" id="__smart__mail" class="__smart_input_text">
+					</label>
+				</div>
+			</form>
+				
+			<div class="__smart__control">
+				<div class="__smart__control__button">
+					<button id="__smart__login" role="button" type="submit" class="__smart__button __button__default">Recuperar conta</button>
+				</div>
+				
+				<!--<div class="__smart__text">
+					<a href="forget.html" class="__smart__anchor">Esqueceu sua palavra-passe?</a>
+				</div>-->
+			</div>
+		</main>
+		<script>
+			window.onload = function(){
+				let btn = document.querySelector("#__smart__login");
+				
+				btn.addEventListener('click', function(err, next){
+					if(err){
+						throw err
+					} else {
+						console.log('carregou no botão para seguinte');
+					}
+					
+				})
+			}
+		</script>
+	</body>
+</html>

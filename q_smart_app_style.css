@@ -1,0 +1,759 @@
+@import 'q_smart_app_animations.css';
+@import 'q_smart_app_colors.css';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+
+* {
+    font: 1em 'Source Sans Pro';
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: var(--default);
+}
+
+main {
+    display: grid;
+    flex: 1;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 70% 17%;
+    grid-gap: 0px;
+    width: 100%;
+    padding: 5%;
+    height: 100%;
+}
+
+label {
+    display: flex;
+    flex: 1;
+    width: 99%;
+    margin: auto;
+}
+
+form {
+    align-self: center;
+}
+
+.__smart__control .__smart__text { margin-top: 15px; }
+
+.__smart__control:last-child{margin:0}
+
+.__smart__control .__smart__text .__smart__anchor {
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+.__smart__logo {
+    /*margin: auto;*/
+    width: 100%;
+}
+
+.__smart_caption {
+    font-size: 3em;
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 1;
+}
+
+.__smart__control {
+    margin: 30px 0;
+    text-align: center;
+    align-items: center;
+}
+
+.__smart__text {
+    align-items: center;
+    align-self: center;
+}
+
+.__smart_input_text {
+    height: 56px;
+    width: 100%;
+    border: 2px solid rgb(57 90 255 / 52%);
+    border-radius: 6px;
+    background-color: #EFF9FF;
+    padding: 10px 20px;
+    border-color: rgb(57 90 255 / 52%);
+}
+
+.__smart_input_text:hover {
+    border: 2px solid var(--default);
+    transition: Border 0.5s;
+    background-color: white;
+}
+
+.__smart__text__caption {
+    align-items: center;
+    align-self: center;
+}
+
+.__smart__button {
+    color: white; 	
+    border: none;
+    width: 100%;
+    height: 50px;
+    font-weight: 800;
+    font-size: 20px;
+    border-radius: 33px;
+}
+
+.__button__default {
+    background: var(--default);
+    box-shadow: 3px 6px 9px rgb(57 90 255 / 52%);
+}
+
+.__button__premium {
+    background: #FBB03B;
+    box-shadow: 3px 6px 9px rgb(251 176 59 / 52%);
+}
+
+.__button__danger {
+    background: #fb4f3b;
+    box-shadow: 3px 6px 9px rgb(251 79 59 / 52%);
+}
+
+.__smart__logo__image {
+    align-self: center;
+}
+.__smart__logo__image .__smart__anchor {
+    display: block;
+    background-image: url(assets/images/logo_original.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 50%;
+    height: 65px;
+    margin: auto;
+}
+
+header {
+    grid-template-columns: 10% 85%;
+    display: grid;
+    column-gap: 1em;
+    background-color:var(--default);
+    padding: 0 5%;
+}
+.__smart__back { display: inline-flex; }
+.__smart__text .__anchor, .__smart__back .__anchor a { font-size: 2em; }
+.__smart__logo__image .__smart__anchor { margin: 0 0 0 auto;}
+.__smart__profile_image {
+    width: 41px;
+    border-radius: 50%;
+    border: 4px solid #38B6FF;
+    margin: 6px auto 0;
+    display: block;
+}
+
+.__smart__profile_name h3 {
+    font-weight: 100;
+    margin:0;
+}
+
+.__smart__profile_name h3 #__profile_name {
+    color: white;
+    font: 15px 'Source Sans Pro';
+}
+
+.__smart__profile_type span a {
+    color: white;
+    text-decoration: underline;
+}
+
+.__smart__profile {
+    display: grid;
+    grid-template-columns: 84% 16%;
+    height: 100%;
+}
+
+.__smart__control { margin: 20px 0; }
+.__smart_caption { margin: 10px;}
+
+#__menu {
+    height: 55px;
+    display: grid;
+    grid-row: 1;
+    bottom: 0;
+    width: 100%;
+    margin: 0;z-index: 996;
+}
+
+.__smart__menu {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    display: grid;
+    height: 55px;
+    align-self: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px -6px 9px -6px rgb(0 0 0 / 20%);
+    background-color: white;z-index: 997;
+}
+
+.__center__menu {
+    background-color: var(--default);
+    width: 45px;
+    height: 45px;
+    margin: auto;
+    border-radius: 50%;
+    display: grid;
+    box-shadow: 0 0 13px 0px var(--default);
+}
+
+#__menu .__smart__section.active > svg > g > path,
+#__menu .__smart__section.active > svg > g > circle,
+#__menu .__smart__section.active > svg > g > line,
+#__menu .__smart__section.active > svg > path {
+    stroke: var(--default);
+    stroke-width: 2.5;
+}
+
+#__menu .__smart__section.active:after {
+    content:"";
+    width: 70%;
+    height: 100%;
+    top: -15px;
+    margin: auto;
+    padding: 5px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border-top: 3px solid var(--default);
+    stroke-width: 2.5;
+}
+
+#__menu .__smart__section.active { position: relative; }
+
+section.__smart__menu__bubble {
+    position: absolute;
+    margin: auto;
+    bottom: 63px;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    width: 80%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+section.__smart__menu__bubble > ul {
+    background-color: rgb(255 255 255 / 92%);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 11px rgb(0 0 0 / 4%);
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 45% 45%;
+    gap: 7%;
+    height: 240px;
+    width: 100%;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
+section.__smart__menu__bubble > ul:before {
+    position: absolute;
+    content: "";
+    border-width: 16px;
+    border-style: solid;
+    border-color: rgb(0 0 0 / 9%) transparent transparent transparent;
+    bottom: -13%;
+    left: 44%;
+    right: 50%;
+}
+
+section.__smart__menu__bubble > ul:after {
+    position: absolute;
+    content: "";
+    border-width: 16px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    bottom: -12%;
+    left: 44%;
+    right: 50%;
+}
+
+section.__smart__menu__bubble > ul li a {
+    display: block;
+    font-size: 0.8em;
+}
+
+section.__smart__menu__bubble > ul li a > .__bubble_description > .__smart_text { color: black; }
+
+section.__smart__menu__bubble > ul li a > .__bubble_icon {
+    width: 50%;
+    height: 60px;
+    margin: auto;
+}
+
+section.__smart__menu__bubble > ul li a > .__bubble_icon > img {
+    border: 1px solid var(--default);
+    width: 100%;
+    border-radius: 50%;
+}
+
+.__smart__profile_name {
+    display: block;
+    width: 100%;
+    align-items: end;
+    align-self: center;
+    text-align: end;
+}
+
+.__smart__profile_type {
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 0.7em;
+    text-align: end;
+}
+
+.__smart__item a .__menu_description span, .__smart__profile_icon, .__smart__plan .plan.active { display: block; }
+
+section#__smart_section_home {
+    display: inline-block;
+    grid-template-columns: 50% 50%;
+    /* grid-template-rows: 40% 40%; */
+    /* gap: 12% 4%; */
+    text-align: center;
+    align-items: center;
+    overflow-y: auto;
+    /* height: calc( 100% - 260px );*/
+}
+
+.__smart__item {
+    display: inline-block;
+    margin: 5px;
+}
+
+.__smart__item a {
+    display: block;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    height: 180px;
+    box-shadow: 2px 2px 8px rgb(0 0 0 / 20%);
+    width: 140px;
+    border-radius: 30px;
+    background-color: white;
+    border: thin solid rgb(0 0 0 / 20%)
+}
+
+.__smart__item a .__image_menu {
+    width: 79px;
+    margin: 10px auto 0;
+    background-color: grey;
+    padding: 14px;
+    border-radius: 50%;
+}
+
+.__smart__item a .__menu_description .__smart_text_total {
+    background-color: #FBB03B;
+    color: white;
+    height: 45px;
+    padding: 4px 10px 10px;
+    font-size: 10pt;
+    display: grid;
+    align-self: center;
+    align-items: center;
+}
+
+.__smart__item a .__menu_description span.__smart_text {
+    font-size: 12pt;
+    font-weight: 600;
+    color: black;
+    width: 100px;
+    margin: 5px auto;
+}
+
+.userProfile {
+    height: calc( 100% - 55px);
+    position: absolute;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 7% 50%;
+    gap: 1%;
+    z-index: 995;
+}
+
+.__alert {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 5%;
+    background-color: white;
+    height: calc( 100% - 55px );
+    display: grid;
+    grid-template-rows: 10% 72% 10%;
+    grid-template-columns: 100%;
+    gap: 4%;
+}
+
+.__alert .__smart__logo img {
+    max-width: 120px;
+}
+
+.__alert .__smart__text .__smart__text__caption .__smart_caption {
+    font-size: 2em;
+    letter-spacing: -2px;
+}
+
+.__alert .__smart__text p {
+    font-weight: 600;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.__alert .__smart__text .__smart__icon {
+    text-align: center;
+    align-items: center;
+    align-self: center;
+}
+
+.__alert .__smart__text .__smart__icon img {
+    max-width: 90px;
+    margin-bottom: 25px;
+}
+
+.__alert .__smart__logo {
+    align-self: center;
+    align-items: center;
+    text-align: center;
+}
+
+.__smart__header_item {
+    grid-area: header;
+}
+
+.__smart__account {
+    grid-area: main;
+    text-align: center;
+    color: white;
+    align-items: center;
+    align-self: center;
+}
+
+.header_userProfile {
+    grid-template-areas:'header header' 'main main';
+}
+
+.__smart__account__details .__smart_caption {
+    letter-spacing: 0;
+    font-size: 3.5em;
+    margin: 5px 0;
+}
+
+.__smart__account .__smart__text:first-child {
+    margin-top: 37px;
+}
+
+.__smart__account .__smart__text:first-child span {
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.__smart__account .__smart__text:last-child {
+    margin-bottom: 25px;
+}
+
+.__smart__account .__smart__text:last-child span {
+    font-size: 0.7em;
+    margin-left: 2px;
+}
+
+toast {
+	padding: 15px;
+	z-index: 99999;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	margin: auto;
+	width: 100%;
+	bottom: 7%;
+	right: 0;
+	height: 51px;
+    opacity: 0;
+    display: none;
+	position: fixed;
+}
+
+.alert {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+.alert-success {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #b7cea4;
+}
+.alert-error{
+	color: #fff;
+	background-color: #FD3C3F;
+	border-color: #960002;
+}
+.alert-info{
+	color: #E65100;
+	background-color: #ffda9d;
+	border-color: #F57F17;
+}
+
+.atr {
+    background-color: rgba(0,0,0,.50);
+    height: calc( 100% - 55px);
+    display: none;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 997;
+}
+.topo {background-color:var(--default);color:white;padding:0 5%;box-shadow:0px 2px 7px rgb(57 90 255 / 80%);}
+.close img { height: 1.5em;}
+.__smart__text .__anchor { text-align: start; }
+.__smart_userprofile, .__smart_userprofile > div > span { text-align: center; }
+.__smart_userprofile > div > span._function { font-weight: 600; font-size:.8rem;}
+.__smart_userprofile > div > span._plan { 
+    font-size: .6em;
+    color: black;
+    font-weight: 600;
+    background-color: white;
+    padding: 2px;
+    margin: 5px auto;
+    display: block;
+    width: 90px;
+    border-radius: 20px;
+}
+
+.smart_label .__smart__control {
+    margin: 0;
+    align-items: center;
+    align-self: baseline;
+}
+
+.smart_label .__smart__control .__smart_caption {
+    margin: 0;
+    font-size: 1.8em;
+    align-items: center;
+    align-self: center;
+    text-align: start;
+    letter-spacing: -1px;
+}
+
+.smart_label {
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    margin-bottom: 25px;
+    height: 35px;
+    background: linear-gradient(180deg, white, 93%, transparent);
+}
+
+.smart_label .__smart__control:last-child {
+    grid-template-columns: 75% 25%;
+    display: grid;
+    position: relative;
+}
+
+.loadActivities a ._text {
+    display: grid;
+    text-align: center;
+    height: 35px;
+    margin: auto;
+    align-self: center;
+    align-items: center;
+    width: 50%;
+}
+
+.smart_label .__smart__control .__smart__icon {
+    width: 20px;
+    line-height: 2;
+    align-items: center;
+    align-self: center;
+    text-align: end;
+    float: right;
+    margin: 0 0 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+.smart_label .__smart__control ._text {
+    display: inline-block;
+    align-items: center;
+    align-self: center;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+
+.smart_label {
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    padding: 10px 5% 0;
+    height: 48px;
+    background: linear-gradient(180deg, white, 93%, transparent);
+}
+
+.__smart_activity {
+    padding: 0% 3% 3%;
+    overflow-y: auto;
+}
+
+ul#act {
+    display: inline-block;
+    grid-gap: 0.2%;
+    overflow-y: auto;
+}
+
+li.item {
+    padding: 8px 10px;
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 25%);
+    width: 98%;
+    border-radius: 11px;
+    margin: 7px auto;
+    overflow-y: auto;
+}
+
+.__activities {
+    display: grid;
+    overflow-y: auto;
+}
+
+.item-content:first-child {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+span.activity-name {
+    font-weight: 700;
+    color: var(--default);
+}
+
+span.activity-date {
+    font-size: 0.7em;
+    align-items: center;
+    align-self: center;
+    text-align: end;
+}
+
+.item-content:last-child {
+    font-size: .8em;
+    padding: 5px 0;
+}
+
+.__smart__plan {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 998;
+    padding: 5%;
+    background-color: var(--default);
+}
+
+.__smart__plan .plan {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2%;
+    border-radius: 20px;
+    background: white;
+    display: none;
+    box-shadow: 2px 2px 10px rgb(0 0 0 / 30%);
+}
+
+
+.__smart__plan .__smart__profile_image {
+    border: none;
+    width: 25px;
+    margin: 0 0 10px auto;
+}
+
+.__smart__plan__image {
+    text-align: center;
+}
+
+.__smart__plan .plan .__smart__text__caption .__smart_caption {
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: -2px;
+    margin: 10px 0 0px;
+}
+
+.__smart__plan .plan .__smart__text__caption span {
+    font-size: 0.7em;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.__smart__plan__image img {
+    width: 60%;
+    margin: 0 0 10px;
+}
+
+.__smart__plan__image .preco h3 {
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 0 0 5px;
+}
+
+.__smart__plan__image .preco h3 span {
+    font-size: 0.5em;
+    margin-left: 2px;
+    letter-spacing: 0;
+}
+
+.__smart__plan__image div p {
+    font-size: 0.8em;
+    width: 80%;
+    margin: auto;
+}
+
+.__smart__plan__image div .__anchor {
+    font-size: 0.8em !important;
+    margin: 10px auto;
+    display: block;
+    text-align: center !important;
+    width: 25%;
+}
+
+ol.__smart__plan__indicator {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+ol.__smart__plan__indicator li {
+    display: inline-block;
+}
+
+ol.__smart__plan__indicator li a {
+    color: white;
+    font-size: 2em;
+    line-height: 0.9;
+}
+
+ol.__smart__plan__indicator li.active a {
+    color: #38b6ff;
+    font-size: 2em;
+    margin: 5px;
+    display: block;
+}

@@ -1,0 +1,39 @@
+{
+	"name": "Q-smart: Inquerios e pesquisas",
+	"short_name": "Q-smart",
+	"description": "Q-smart é uma aplicação apara respostas e criação de inqueritos para uma pesquisa.",
+	"icons": [
+		{
+			"src": "assets/images/ic_192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "assets/images/ic_512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url":"/source=pwa",
+	"background_color":"#395AFF",
+	"scope": "/",
+	"orientation":"portrait",
+	"display": "standalone",
+	"theme_color": "#395AFF",
+	"shortcuts":[
+		{
+			"name": "Como está a sua marca?",
+			"short_name": "Today",
+			"description": "Hoje o Q-smart traz um leque de respostas para uma pesquisa que te dará 12mil kwanzas.",
+			"url": "/q_smart?source=pwa",
+			"icons": [{"src":"assets/images/ic.png", "sizes":"192x192"}]
+		},
+		{
+			"name": "Como será a sua marca amamhã?",
+			"short_name": "Tomorrow",
+			"description": "Amanhã o Q-smart traz um leque de respostas para uma pesquisa.",
+			"url": "/q_smart?source=pwa",
+			"icons": [{"src":"assets/images/ic.png", "sizes":"192x192"}]
+		}
+	]
+}

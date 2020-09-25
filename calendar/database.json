@@ -1,0 +1,80 @@
+{
+    "user": [
+      {
+        "id": 1,
+        "username": "user",
+        "password": "dXNlcg==",
+        "fid": 2
+      },
+      {
+        "id": 2,
+        "username": "admin",
+        "password": "YWRtaW4=",
+        "fid": 1
+      }
+    ],
+    "funcao": [
+      {
+        "id": 1,
+        "nome": "administrador",
+        "descrcao": "",
+        "estado": 1
+      },
+      {
+        "id": 2,
+        "nome": "usuario",
+        "descrcao": "",
+        "estado": 1
+      },
+      {
+        "id": 3,
+        "nome": "outro",
+        "descrcao": "",
+        "estado": 1
+      }
+    ],
+    "inqueritos": [
+      {
+        "id": 1,
+        "title": "Banco mundial",
+        "descricao": "Saúde Sexual Reprodutiva",
+        "respostas": "1200",
+        "respondidas": "900"
+      },
+      {
+        "id": 2,
+        "title": "Brexit",
+        "descricao": "Saúde Sexual Reprodutiva",
+        "respostas": "129",
+        "respondidas": "90"
+      },
+      {
+        "id": 3,
+        "title": "Banco Atlantico Angola",
+        "descricao": "Qualidade de atendimento dos clientes",
+        "respostas": "12",
+        "respondidas": "9"
+      },
+      {
+        "id": 4,
+        "title": "Minsa",
+        "descricao": "Rastreamento e Segurança da Covid 19 ",
+        "respostas": "1200",
+        "respondidas": "8"
+      },
+      {
+        "id": 5,
+        "title": "Afrigroup",
+        "descricao": "O consumo de comidas enlatadas",
+        "respostas": "500",
+        "respondidas": "215"
+      },
+      {
+        "id": 6,
+        "title": "Prodesi",
+        "descricao": "Impacto da redução de importação",
+        "respostas": "700",
+        "respondidas": "700"
+      }
+    ]
+  }

@@ -1,0 +1,27 @@
+User-agent: Googlebot
+Allow: /*
+Allow: /docs/public/
+Disallow: /ajax/
+
+
+/**
+function $(element){
+				return document.querySelector(element);
+			}
+			window.onload = function(){
+				let home = $("#user");
+				
+				home.addEventListener('click', function(err, next){
+					if(err){
+						console.log('carregou no botão para salvar na base de dados');
+					} else {
+						throw err
+					}
+					
+				})
+			}
+
+			function $(element){
+				return document.querySelector(element);
+			}
+*/

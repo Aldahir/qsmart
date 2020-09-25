@@ -1,0 +1,17 @@
+@media only screen and (max-width:756px){
+    header {
+        background-color:#395aff;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header {
+        background-color:red;
+    }
+    main {
+        grid-template-columns: 20% 80%;
+    }
+    main section {
+        display: inherit;
+    }
+}
